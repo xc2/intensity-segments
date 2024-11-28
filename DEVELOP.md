@@ -50,6 +50,7 @@ Then the tarball can be published to several repositories like GitHub Releases, 
 
 > [!WARNING]
 > Never publish the tarball directly with `npm publish` or `pnpm publish` commands.
+> 
 > See the [Publishing](#publishing) section for more details.
 
 ## Publishing
@@ -71,6 +72,7 @@ Add dependency `"@109cafe/intensity-sgements": "npm:@canary-109cafe/intensity-se
 
 > [!NOTE]
 > This process allows you to do packaging, verification, and publishing separately.
+> 
 > The Source of Truth for release version is the git tag, you don't need to update the version in `package.json`, and you should not.
 
 The release publishing process begins with creating a new release on GitHub UI.
