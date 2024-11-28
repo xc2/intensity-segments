@@ -2,6 +2,8 @@
 
 # Type Alias: SegmentNode
 
-> **SegmentNode**: [`number`, `number`]
+```ts
+type SegmentNode: [number, number];
+```
 
 The segment node shape of [segment, intensity]

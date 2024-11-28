@@ -25,7 +25,9 @@ segments.toString(); // "[[30,-1],[40,0]]"
 
 ### new IntensitySegments()
 
-> **new IntensitySegments**(): [`IntensitySegments`](Class.IntensitySegments.md)
+```ts
+new IntensitySegments(): IntensitySegments
+```
 
 #### Returns
 
@@ -35,23 +37,22 @@ segments.toString(); // "[[30,-1],[40,0]]"
 
 ### add()
 
-> **add**(`from`, `to`, `amount`): [`IntensitySegments`](Class.IntensitySegments.md)
+```ts
+add(
+   from: number, 
+   to: number, 
+   amount: number): IntensitySegments
+```
 
 Add intensity to the segments
 
 #### Parameters
 
-• **from**: `number`
-
-start of the segment
-
-• **to**: `number`
-
-end of the segment (exclusive)
-
-• **amount**: `number`
-
-intensity to add
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `from` | `number` | start of the segment |
+| `to` | `number` | end of the segment (exclusive) |
+| `amount` | `number` | intensity to add |
 
 #### Returns
 
@@ -63,23 +64,22 @@ the instance self
 
 ### set()
 
-> **set**(`from`, `to`, `amount`): [`IntensitySegments`](Class.IntensitySegments.md)
+```ts
+set(
+   from: number, 
+   to: number, 
+   amount: number): IntensitySegments
+```
 
 Set intensity to the segments
 
 #### Parameters
 
-• **from**: `number`
-
-start of the segment
-
-• **to**: `number`
-
-end of the segment (exclusive)
-
-• **amount**: `number`
-
-intensity to set
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `from` | `number` | start of the segment |
+| `to` | `number` | end of the segment (exclusive) |
+| `amount` | `number` | intensity to set |
 
 #### Returns
 
@@ -91,23 +91,22 @@ the instance self
 
 ### setWith()
 
-> **setWith**(`from`, `to`, `fn`): [`IntensitySegments`](Class.IntensitySegments.md)
+```ts
+setWith(
+   from: number, 
+   to: number, 
+   fn: (prev: number) => number): IntensitySegments
+```
 
 Set intensity to the segments with a setter
 
 #### Parameters
 
-• **from**: `number`
-
-start of the segment
-
-• **to**: `number`
-
-end of the segment
-
-• **fn**
-
-the setter that takes the previous intensity and returns the new intensity
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `from` | `number` | start of the segment |
+| `to` | `number` | end of the segment |
+| `fn` | (`prev`: `number`) => `number` | the setter that takes the previous intensity and returns the new intensity |
 
 #### Returns
 
@@ -119,7 +118,9 @@ the instance self
 
 ### toString()
 
-> **toString**(): `string`
+```ts
+toString(): string
+```
 
 Get the JSON shaped prepared intensity segments
 
@@ -133,7 +134,9 @@ the string shaped segments
 
 ### valueOf()
 
-> **valueOf**(): [`SegmentNode`](TypeAlias.SegmentNode.md)[]
+```ts
+valueOf(): SegmentNode[]
+```
 
 Get the prepared intensity segments
 
