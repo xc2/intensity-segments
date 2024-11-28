@@ -122,3 +122,11 @@ I prefer not to add commits to the Git repository during the publishing process,
 This helps reduce noise in the Git history and minimizes potential conflicts.
 
 Additionally, it avoids triggering any unintended cyclical workflows.
+
+### Why separate package names for canary and stable?
+
+For keeping the npm registry manifest of stable package small.
+
+The canary version might be released frequently which will increase the response size of manifest.
+
+`npm/yarn/pnpm` fetch the manifest for installing dependencies, the larger the manifest, the slower the installation. E.g., the manifest of `@swc/core` is of 3.5MB.
