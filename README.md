@@ -47,6 +47,24 @@ To set the exact intensity to the segments in the range of `[from, to)`.
 
 The final segments list will be automatically compacted as well.
 
+## Legacy Browsers and Runtimes
+
+This package is targeting ES2020 which is fine for most modern browsers and runtimes.
+
+To targeting a legacy browser or runtime, you need a modern bundler like Webpack, Rollup, etc.
+
+An example for webpack/rspack:
+
+```ts
+module.exports = {
+  // ...
+  resolve: {
+    importsFields: ['legacy', 'browser', 'module', 'main'],
+  }
+  // ...
+}
+```
+
 ## Develop
 
 See the [DEVELOP.md](./DEVELOP.md) for more details.
