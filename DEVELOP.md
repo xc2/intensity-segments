@@ -48,10 +48,9 @@ It creates the tarball file named `109cafe-intensity-segments-0.0.0-PLAHOCEHOLDE
 
 Then the tarball can be published to several repositories like GitHub Releases, NPM, etc.
 
-:::warning
-Never publish the tarball directly with `npm publish` or `pnpm publish` commands.
-See the [Publishing](#publishing) section for more details.
-:::
+> [!WARNING]
+> Never publish the tarball directly with `npm publish` or `pnpm publish` commands.
+> See the [Publishing](#publishing) section for more details.
 
 ## Publishing
 
@@ -59,9 +58,8 @@ The publishing process is entirely backed by GitHub Actions.
 
 ### Canary publishing
 
-:::info
-This process allows you to publish against **any branch** for testing purposes.
-:::
+> [!NOTE]
+> This process allows you to publish against **any branch** for testing purposes.
 
 All you need to do is to trigger the `npm-cancary` workflow manually.
 
@@ -71,10 +69,9 @@ Add dependency `"@109cafe/intensity-sgements": "npm:@canary-109cafe/intensity-se
 
 ### Release publishing
 
-:::info
-This process allows you to do packaging, verification, and publishing separately.
-The Source of Truth for release version is the git tag, you don't need to update the version in `package.json`, and you should not.
-:::
+> [!NOTE]
+> This process allows you to do packaging, verification, and publishing separately.
+> The Source of Truth for release version is the git tag, you don't need to update the version in `package.json`, and you should not.
 
 The release publishing process begins with creating a new release on GitHub UI.
 

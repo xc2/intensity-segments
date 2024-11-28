@@ -11,5 +11,11 @@
   "entryFileName": "index",
   "excludeInternal": true,
   "disableSources": true,
-  "excludeProtected": true
+  "excludeProtected": true,
+  "expandParameters": true,
+  "useCodeBlocks": true,
+  "interfacePropertiesFormat": "table",
+  "classPropertiesFormat": "table",
+  "propertyMembersFormat": "table",
+  "parametersFormat": "table"
 }
