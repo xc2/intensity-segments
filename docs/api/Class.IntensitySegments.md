@@ -95,10 +95,10 @@ the instance self
 setWith(
    from: number, 
    to: number, 
-   fn: (prev: number) => number): IntensitySegments
+   mutator: (prev: number) => number): IntensitySegments
 ```
 
-Set intensity to the segments with a setter
+Set intensity to the segments with a mutator
 
 #### Parameters
 
@@ -106,7 +106,7 @@ Set intensity to the segments with a setter
 | ------ | ------ | ------ |
 | `from` | `number` | start of the segment |
 | `to` | `number` | end of the segment |
-| `fn` | (`prev`: `number`) => `number` | the setter that takes the previous intensity and returns the new intensity |
+| `mutator` | (`prev`: `number`) => `number` | the setter that takes the previous intensity and returns the new intensity |
 
 #### Returns
 
@@ -135,19 +135,13 @@ the string shaped segments
 ### valueOf()
 
 ```ts
-valueOf(): SegmentNode[]
+valueOf(): (undefined | number)[][]
 ```
 
 Get the prepared intensity segments
 
 #### Returns
 
-[`SegmentNode`](TypeAlias.SegmentNode.md)[]
+(`undefined` \| `number`)[][]
 
 the segments
-
-#### Remarks
-
-Only use this method when you need the raw segments list.
-
-For performance reason we don't clone another array so please never mutate the segments directly,
